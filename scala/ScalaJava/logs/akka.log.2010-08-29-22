@@ -1,0 +1,12 @@
+[INFO] [2010-08-29 22:08:40,760] [main] s.s.a.c.Config$: AKKA_HOME is defined as [/home/leeing/library/akka/akka-0.10], config loaded from [/home/leeing/library/akka/akka-0.10/config/akka.conf].
+[DEBUG] [2010-08-29 22:08:40,797] [main] s.s.a.d.Dispatchers$globalExecutorBasedEventDrivenDispatcher$: Creating a se.scalablesolutions.akka.dispatch.Dispatchers$globalExecutorBasedEventDrivenDispatcher$ with config [core-pool:16,max-pool:128,timeout:60000,allowCoreTimeout:false,rejectPolicy:CallerRunsPolicy]
+[WARN] [2010-08-29 22:08:40,799] [main] s.s.a.d.Dispatchers$globalExecutorBasedEventDrivenDispatcher$: Tried to configure an already started ThreadPoolBuilder of type [se.scalablesolutions.akka.dispatch.Dispatchers$globalExecutorBasedEventDrivenDispatcher$]
+[DEBUG] [2010-08-29 22:08:40,828] [main] s.s.a.d.Dispatchers$globalExecutorBasedEventDrivenDispatcher$: Starting up ExecutorBasedEventDrivenDispatcher[akka:event-driven:dispatcher:global]
+	with throughput [5]
+[DEBUG] [2010-08-29 22:08:40,839] [akka:event-driven:dispatcher:global-1] s.s.a.d.ThreadPoolBuilder$MonitorableThread: Created thread akka:event-driven:dispatcher:global-1
+[INFO] [2010-08-29 22:09:58,798] [main] s.s.a.c.Config$: AKKA_HOME is defined as [/home/leeing/library/akka/akka-0.10], config loaded from [/home/leeing/library/akka/akka-0.10/config/akka.conf].
+[DEBUG] [2010-08-29 22:09:58,834] [main] s.s.a.d.Dispatchers$globalExecutorBasedEventDrivenDispatcher$: Creating a se.scalablesolutions.akka.dispatch.Dispatchers$globalExecutorBasedEventDrivenDispatcher$ with config [core-pool:16,max-pool:128,timeout:60000,allowCoreTimeout:false,rejectPolicy:CallerRunsPolicy]
+[WARN] [2010-08-29 22:09:58,836] [main] s.s.a.d.Dispatchers$globalExecutorBasedEventDrivenDispatcher$: Tried to configure an already started ThreadPoolBuilder of type [se.scalablesolutions.akka.dispatch.Dispatchers$globalExecutorBasedEventDrivenDispatcher$]
+[DEBUG] [2010-08-29 22:09:58,863] [main] s.s.a.d.Dispatchers$globalExecutorBasedEventDrivenDispatcher$: Starting up ExecutorBasedEventDrivenDispatcher[akka:event-driven:dispatcher:global]
+	with throughput [5]
+[DEBUG] [2010-08-29 22:09:58,875] [akka:event-driven:dispatcher:global-1] s.s.a.d.ThreadPoolBuilder$MonitorableThread: Created thread akka:event-driven:dispatcher:global-1

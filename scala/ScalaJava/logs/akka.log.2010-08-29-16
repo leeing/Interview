@@ -1,0 +1,32 @@
+[INFO] [2010-08-30 00:07:52,164] [main] s.s.a.c.Config$: AKKA_HOME is defined as [/home/leeing/library/akka/akka-0.10], config loaded from [/home/leeing/library/akka/akka-0.10/config/akka.conf].
+[DEBUG] [2010-08-30 00:07:52,209] [main] s.s.a.d.Dispatchers$globalExecutorBasedEventDrivenDispatcher$: Creating a se.scalablesolutions.akka.dispatch.Dispatchers$globalExecutorBasedEventDrivenDispatcher$ with config [core-pool:16,max-pool:128,timeout:60000,allowCoreTimeout:false,rejectPolicy:CallerRunsPolicy]
+[WARN] [2010-08-30 00:07:52,210] [main] s.s.a.d.Dispatchers$globalExecutorBasedEventDrivenDispatcher$: Tried to configure an already started ThreadPoolBuilder of type [se.scalablesolutions.akka.dispatch.Dispatchers$globalExecutorBasedEventDrivenDispatcher$]
+[DEBUG] [2010-08-30 00:07:52,240] [main] s.s.a.d.Dispatchers$globalExecutorBasedEventDrivenDispatcher$: Starting up ExecutorBasedEventDrivenDispatcher[akka:event-driven:dispatcher:global]
+	with throughput [5]
+[DEBUG] [2010-08-30 00:07:52,251] [akka:event-driven:dispatcher:global-1] s.s.a.d.ThreadPoolBuilder$MonitorableThread: Created thread akka:event-driven:dispatcher:global-1
+[INFO] [2010-08-29 16:31:28,274] [main] s.s.a.c.Config$: AKKA_HOME is defined as [/home/leeing/library/akka/akka-0.10], config loaded from [/home/leeing/library/akka/akka-0.10/config/akka.conf].
+[INFO] [2010-08-29 16:33:35,617] [main] s.s.a.c.Config$: AKKA_HOME is defined as [/home/leeing/library/akka/akka-0.10], config loaded from [/home/leeing/library/akka/akka-0.10/config/akka.conf].
+[INFO] [2010-08-29 16:34:00,192] [main] s.s.a.c.Config$: AKKA_HOME is defined as [/home/leeing/library/akka/akka-0.10], config loaded from [/home/leeing/library/akka/akka-0.10/config/akka.conf].
+[DEBUG] [2010-08-29 16:34:00,229] [main] s.s.a.d.Dispatchers$globalExecutorBasedEventDrivenDispatcher$: Creating a se.scalablesolutions.akka.dispatch.Dispatchers$globalExecutorBasedEventDrivenDispatcher$ with config [core-pool:16,max-pool:128,timeout:60000,allowCoreTimeout:false,rejectPolicy:CallerRunsPolicy]
+[WARN] [2010-08-29 16:34:00,230] [main] s.s.a.d.Dispatchers$globalExecutorBasedEventDrivenDispatcher$: Tried to configure an already started ThreadPoolBuilder of type [se.scalablesolutions.akka.dispatch.Dispatchers$globalExecutorBasedEventDrivenDispatcher$]
+[DEBUG] [2010-08-29 16:34:00,259] [main] s.s.a.d.Dispatchers$globalExecutorBasedEventDrivenDispatcher$: Starting up ExecutorBasedEventDrivenDispatcher[akka:event-driven:dispatcher:global]
+	with throughput [5]
+[DEBUG] [2010-08-29 16:34:00,270] [akka:event-driven:dispatcher:global-1] s.s.a.d.ThreadPoolBuilder$MonitorableThread: Created thread akka:event-driven:dispatcher:global-1
+[INFO] [2010-08-29 16:36:32,960] [main] s.s.a.c.Config$: AKKA_HOME is defined as [/home/leeing/library/akka/akka-0.10], config loaded from [/home/leeing/library/akka/akka-0.10/config/akka.conf].
+[DEBUG] [2010-08-29 16:36:32,997] [main] s.s.a.d.Dispatchers$globalExecutorBasedEventDrivenDispatcher$: Creating a se.scalablesolutions.akka.dispatch.Dispatchers$globalExecutorBasedEventDrivenDispatcher$ with config [core-pool:16,max-pool:128,timeout:60000,allowCoreTimeout:false,rejectPolicy:CallerRunsPolicy]
+[WARN] [2010-08-29 16:36:32,998] [main] s.s.a.d.Dispatchers$globalExecutorBasedEventDrivenDispatcher$: Tried to configure an already started ThreadPoolBuilder of type [se.scalablesolutions.akka.dispatch.Dispatchers$globalExecutorBasedEventDrivenDispatcher$]
+[DEBUG] [2010-08-29 16:36:33,028] [main] s.s.a.d.Dispatchers$globalExecutorBasedEventDrivenDispatcher$: Starting up ExecutorBasedEventDrivenDispatcher[akka:event-driven:dispatcher:global]
+	with throughput [5]
+[DEBUG] [2010-08-29 16:36:33,039] [akka:event-driven:dispatcher:global-1] s.s.a.d.ThreadPoolBuilder$MonitorableThread: Created thread akka:event-driven:dispatcher:global-1
+[INFO] [2010-08-29 16:36:55,565] [main] s.s.a.c.Config$: AKKA_HOME is defined as [/home/leeing/library/akka/akka-0.10], config loaded from [/home/leeing/library/akka/akka-0.10/config/akka.conf].
+[DEBUG] [2010-08-29 16:36:55,604] [main] s.s.a.d.Dispatchers$globalExecutorBasedEventDrivenDispatcher$: Creating a se.scalablesolutions.akka.dispatch.Dispatchers$globalExecutorBasedEventDrivenDispatcher$ with config [core-pool:16,max-pool:128,timeout:60000,allowCoreTimeout:false,rejectPolicy:CallerRunsPolicy]
+[WARN] [2010-08-29 16:36:55,606] [main] s.s.a.d.Dispatchers$globalExecutorBasedEventDrivenDispatcher$: Tried to configure an already started ThreadPoolBuilder of type [se.scalablesolutions.akka.dispatch.Dispatchers$globalExecutorBasedEventDrivenDispatcher$]
+[DEBUG] [2010-08-29 16:36:55,634] [main] s.s.a.d.Dispatchers$globalExecutorBasedEventDrivenDispatcher$: Starting up ExecutorBasedEventDrivenDispatcher[akka:event-driven:dispatcher:global]
+	with throughput [5]
+[DEBUG] [2010-08-29 16:36:55,645] [akka:event-driven:dispatcher:global-1] s.s.a.d.ThreadPoolBuilder$MonitorableThread: Created thread akka:event-driven:dispatcher:global-1
+[INFO] [2010-08-29 16:37:21,024] [main] s.s.a.c.Config$: AKKA_HOME is defined as [/home/leeing/library/akka/akka-0.10], config loaded from [/home/leeing/library/akka/akka-0.10/config/akka.conf].
+[DEBUG] [2010-08-29 16:37:21,060] [main] s.s.a.d.Dispatchers$globalExecutorBasedEventDrivenDispatcher$: Creating a se.scalablesolutions.akka.dispatch.Dispatchers$globalExecutorBasedEventDrivenDispatcher$ with config [core-pool:16,max-pool:128,timeout:60000,allowCoreTimeout:false,rejectPolicy:CallerRunsPolicy]
+[WARN] [2010-08-29 16:37:21,062] [main] s.s.a.d.Dispatchers$globalExecutorBasedEventDrivenDispatcher$: Tried to configure an already started ThreadPoolBuilder of type [se.scalablesolutions.akka.dispatch.Dispatchers$globalExecutorBasedEventDrivenDispatcher$]
+[DEBUG] [2010-08-29 16:37:21,089] [main] s.s.a.d.Dispatchers$globalExecutorBasedEventDrivenDispatcher$: Starting up ExecutorBasedEventDrivenDispatcher[akka:event-driven:dispatcher:global]
+	with throughput [5]
+[DEBUG] [2010-08-29 16:37:21,100] [akka:event-driven:dispatcher:global-1] s.s.a.d.ThreadPoolBuilder$MonitorableThread: Created thread akka:event-driven:dispatcher:global-1
