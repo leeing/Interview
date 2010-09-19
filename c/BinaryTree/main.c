@@ -7,7 +7,8 @@
  * 4. 求二叉树的深度。
  * Created on September 19, 2010, 7:57 PM
  */
-
+/* important: 为避免错误，以后使用 if( NULL == root->left ) 这样的写法
+ */
 #include <stdio.h>
 #include <stdlib.h>
 
