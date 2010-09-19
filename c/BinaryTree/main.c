@@ -86,7 +86,7 @@ void postorder(BTreeNode* root){
 int getLeavesNum(BTreeNode* root){
     if(root == NULL)
         return 0;
-    else if(root->left = NULL && root->right == NULL)
+    else if(root->left == NULL && root->right == NULL)
         return 1;
         
     return getLeavesNum(root->left)+getLeavesNum(root->right);
