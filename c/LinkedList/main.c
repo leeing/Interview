@@ -44,6 +44,7 @@ int main(int argc, char** argv) {
 void tail_insert() {
     Node* head = malloc(sizeof (Node));
     Node* temp = head;
+    head->next = NULL;
 
     int num;
     printf("please input a num,ended with 0:\n");
