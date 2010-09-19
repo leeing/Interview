@@ -34,7 +34,8 @@ int main(int argc, char** argv) {
     postorder(root);
     printf("\n");
 
-    printf("the number of leaves is : %d \n",getLeavesNum(root,0));
+    printf("the number of leaves is : %d \n",getLeavesNum(root));
+    printf("the depth of the binary tree is :%d\n",getDepth(root));
     return (EXIT_SUCCESS);
 }
 /*
@@ -83,10 +84,20 @@ void postorder(BTreeNode* root){
 }
  
 int getLeavesNum(BTreeNode* root){
-
+    return 0;
 }
 
 int getDepth(BTreeNode* root){
-
-
+    int leftdepth,rightdepth;
+    if(root==NULL){
+        return 0;
+    }else{
+        leftdepth = getDepth(root->left);
+        rightdepth = getDepth(root->right);
+        if(leftdepth>rightdepth){
+            return leftdepth + 1;
+        }else{
+            return rightdepth + 1;
+        }
+    }
 }
