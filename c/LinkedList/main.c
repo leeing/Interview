@@ -21,6 +21,7 @@ typedef struct node{
 void head_insert();
 void tail_insert();
 void traverse();
+int getLength(Node*);
 
 int main(int argc, char** argv) {
     int choice;
@@ -58,6 +59,7 @@ void tail_insert() {
     }
     printf("the elements are:\n");
     traverse(head);
+    printf("the length of the list is: %d\n",getLength(head));
 
 }
 
@@ -81,7 +83,8 @@ void head_insert(){
     }
     printf("the elements are:\n");
     traverse(head);
-}
+    printf("the length of the list is: %d\n",getLength(head));
+   }
 
 void traverse(Node* list){
     if(list == NULL){
@@ -93,4 +96,17 @@ void traverse(Node* list){
         printf("%d\n",head->data);
         head=head->next;
     }
+}
+
+int getLength(Node* list){
+    if(list->next == NULL)
+        return 0;
+    Node* head = list->next;
+    int length=0;
+
+    while(head!=NULL){
+        head = head->next;
+        length++;
+    }
+    return length;
 }
