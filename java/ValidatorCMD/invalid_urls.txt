@@ -1,0 +1,53 @@
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/mri/mriURLMapping.java;144;http://www.server2.com$1.jpg;Exception: java.net.UnknownHostException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/portal/LearningConfiguration.java;155;http://hostname.domain.com;Exception: java.net.UnknownHostException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/portal/LearningConfiguration.java;142;http://hostname.domain.com;Exception: java.net.UnknownHostException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/rowProxyRemote.java;93;http://firewall.myschool.edu;Exception: java.net.UnknownHostException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/access/XMLFile.java;223;http://java.sun.com/j2ee/dtds/web-app;HttpCode:404
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/rowProxyPassLoc.java;78;http://www.myserver.com/;Exception: java.net.UnknownHostException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/rowFRCAProxyPass.java;97;http://www.myserver.com;Exception: java.net.UnknownHostException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/rowProxyPass.java;452;http://www.myserver.com/;Exception: java.net.UnknownHostException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/rowProxyPass.java;451;http://www.myserver.com/;Exception: java.net.UnknownHostException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/rowProxyPassLoc.java;77;http://www.myserver.com/;Exception: java.net.UnknownHostException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/ui/wizards/adminssl/Finished.java;88;http://www-3.ibm.com/software/info1/websphere/index.jsp?tab=products/appserv;Exception: java.net.UnknownHostException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/formWorkplaceInfo.java;147;http://www-128.ibm.com/developerworks/workplace/documentation.html\;HttpCode:404
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/toolkit/XMLStyleTrans.java;100;http://www.somewhere.com/stylesheet.xml;HttpCode:404
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/access/LWIAppSecRoleMgr.java;103;http://apache.org/xml/features/nonvalidating/load-external-dtd;HttpCode:404
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/formWorkplaceInfo.java;133;http://publib.boulder.ibm.com/iseries/v5r2/ic2924/info/rzaie/rzaiewpchecklist.htm\;HttpCode:404
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/formWebServiceInfo.java;119;http://publib.boulder.ibm.com/iseries/v5r3/ic2924/info/rzaie/rzaiegetstarted.htm\;HttpCode:404
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/perf/wpa/gui/AdvisorTextAuiml.java;54;http://www-912.ibm.com/wle/EstimatorServlet\;HttpCode:404
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/mri/mriURLMapping.java;143;http://www.server2.com/service;HttpCode:404
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/access/DOMParser.java;122;http://xml.org/sax/features/validation;HttpCode:404
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/rowContainers.java;284;http://server.com/;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/rowContainers.java;313;http://server.com/;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/perf/wpa/gui/AdvisorTextAuiml.java;55;http://www-912.ibm.com/wle/EstimatorServlet\;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/LinksNav.java;140;http://publib-b.boulder.ibm.com/abstracts/sg247221.html;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/LinksNav.java;90;http://www.ibm.com/redbooks/abstracts/sg246716.html;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/HTTPAdmin.java;1006;http://www.ibm.com/systems/i/software/http//;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/express/taskCreatePortal.java;323;http://www-912.ibm.com/s_dir/sline003.nsf/554c38c4848b77f2862567bd0046e003/e467b2024ab4472386256fac006332cc?OpenDocument;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/ui/wizards/adminssl/Finished.java;89;http://www.ibm.com;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/formPortalInfo.java;119;http://publib.boulder.ibm.com/infocenter/systems/scope/i5os/topic/rzaie/rzaiewebportal.htm\;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/portal/WP6101VersionOnWAS70.java;43;http://publib.boulder.ibm.com/infocenter/wpdoc/v6r1m0/index.jsp;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/formWasInfo.java;184;http://publib.boulder.ibm.com/infocenter/wasinfo/v6r1/topic/com.ibm.websphere.base.iseries.doc/info/iseries/ae/welc6productov.html;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/propBalancer.java;160;http://www.ibm.com;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/HTTPAdmin.java;1008;http://www.ibm.com/eserver/iseries/infocenter;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/LinksNav.java;87;http://www.ibm.com/servers/eserver/iseries/software/http/;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/LinksNav.java;148;http://www.ibm.com/software/websphere/portal/;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/formPortalInfo.java;146;http://www-1.ibm.com/support/search.wss?rs=688&&tc=SSHRKX%20&q=V61PRN\;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/perf/wpa/gui/AdvisorTextAuiml.java;53;http://www-912.ibm.com/wle/EstimatorServlet\;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/express/taskCreatePortal.java;329;http://www-912.ibm.com/s_dir/sline003.nsf/554c38c4848b77f2862567bd0046e003/28943dd91eee700686257439005282c6?OpenDocument;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/express/StepEIMSvr.java;98;http://www.ibm.com/servers/eserver/iseries/software/websphere/wsappserver/news/idToken.html;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/propBalancer.java;157;http://www.ibm.com/systems/i/software/http//;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/express/taskCreatePortal.java;327;http://www-912.ibm.com/s_dir/sline003.NSF/554c38c4848b77f2862567bd0046e003/f6a9fd23474b09268625717a00528185?OpenDocument;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/perf/wpa/gui/AdvisorTextAuiml.java;59;http://www-912.ibm.com/wle/EstimatorServlet\;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/express/taskCreatePortal.java;328;http://www-912.ibm.com/s_dir/sline003.NSF/554c38c4848b77f2862567bd0046e003/daa5b25d81d377e18625717a0052823e?OpenDocument;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/express/taskCreatePortal.java;324;http://www-912.ibm.com/s_dir/sline003.nsf/554c38c4848b77f2862567bd0046e003/4284aa395e17ca36862571150054f03c?OpenDocument;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/perf/wpa/gui/AdvisorTextAuiml.java;116;http://www-912.ibm.com/wle/EstimatorServlet\;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/ui/wizards/adminssl/Finished.java;86;http://www.ibm.com/systems/i/software/http//;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/formHTTPInfo.java;140;http://www.ibm.com/servers/eserver/iseries/software/http/news/sitenews.html\;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/LinksNav.java;125;http://www.ibm.com/servers/eserver/iseries/software/bizapps/;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/formWorkplaceInfo.java;160;http://publib.boulder.ibm.com/pvc/wp/502/indexrn-smbi.html\;HttpCode:404
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/data/DOMParser.java;122;http://xml.org/sax/features/validation;HttpCode:404
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/data/XMLFile.java;200;http://java.sun.com/j2ee/dtds/web-app;HttpCode:404
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/LinksNav.java;138;http://www.ibm.com/servers/eserver/iseries/software/websphere/wsappserver/;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/formWorkplaceInfo.java;173;http://www.ibm.com/eserver/iseries/software/workplace/support.html\;Exception: java.net.ConnectException
+c:/Web Admin/WebAdmin_v5/com/ibm/as400/httpsvr/gui/rowCacheGcUnused.java;121;http://www.wibble.com;Exception: java.net.UnknownHostException
