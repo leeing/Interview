@@ -2,7 +2,7 @@
  * File:   main.c
  * Author: leeing
  * 1. 二叉树的前序创建。
- * 2. 前序遍历，中序遍历，后序遍历。
+ * 2. 前序遍历，中序遍历，后序遍历,层次遍历。
  * 3. 求叶子节点的个数。
  * 4. 求二叉树的深度。
  * Created on September 19, 2010, 7:57 PM
@@ -11,6 +11,8 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
+
+#define MAX_SIZE 100
 
 typedef struct BinaryTreeNode{
     int data;
@@ -22,19 +24,27 @@ BTreeNode* create();
 void preorder(BTreeNode* root);
 void postorder(BTreeNode* root);
 void inorder(BTreeNode* root);
+void levelorder(BTreeNode* root);
 int getLeavesNum(BTreeNode* root);
 
 int main(int argc, char** argv) {
 
     BTreeNode* root = create();
+
     printf("preorder :\n");
     preorder(root);
+
     printf("\ninorder  :\n");
     inorder(root);
+
     printf("\npostorder:\n");
     postorder(root);
     printf("\n");
 
+    printf("\nleverorder:\n");
+    levelorder(root);
+    printf("\n");
+    
     printf("the number of leaves is : %d \n",getLeavesNum(root));
     printf("the depth of the binary tree is :%d\n",getDepth(root));
     return (EXIT_SUCCESS);
@@ -82,6 +92,29 @@ void postorder(BTreeNode* root){
         postorder(root->right);
         printf("%d \t",root->data);
     }
+}
+
+void levelorder(BTreeNode* root){
+    BTreeNode* queue[MAX_SIZE];
+    int front = 0;
+    int rear = 0;
+    queue[0] = root;
+    while(front <= rear){
+        BTreeNode* head = queue[front];
+        if(head!=NULL){
+            printf("%d \t",head->data);
+            front++;
+        }
+
+        if(head->left != NULL){
+            queue[++rear] = head->left;
+        }
+
+        if(head->right != NULL){
+            queue[++rear] = head->right;
+        }
+    }
+
 }
  
 int getLeavesNum(BTreeNode* root){
