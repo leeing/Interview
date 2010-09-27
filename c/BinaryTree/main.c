@@ -94,6 +94,7 @@ void postorder(BTreeNode* root){
     }
 }
 
+/*
 void levelorder(BTreeNode* root){
     BTreeNode* queue[MAX_SIZE];
     int front = 0;
@@ -116,7 +117,30 @@ void levelorder(BTreeNode* root){
     }
 
 }
- 
+*/
+
+// 修改后的静态队列实现，rear应该指向队尾元素的下一个位置。
+void levelorder(BTreeNode* root){
+    BTreeNode* queue[MAX_SIZE];
+    int front = 0;
+    int rear = 1;
+    queue[0] = root;
+    while(front < rear){
+        BTreeNode* head = queue[front];
+        if(head!=NULL){
+            printf("%d \t",head->data);
+            front++;
+        }
+
+        if(head->left != NULL){
+            queue[rear++] = head->left;
+        }
+
+        if(head->right != NULL){
+            queue[rear++] = head->right;
+        }
+    }
+}
 int getLeavesNum(BTreeNode* root){
     if(root == NULL)
         return 0;
