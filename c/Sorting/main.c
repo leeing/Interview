@@ -1,5 +1,4 @@
 /* 
- * File:   main.c
  * Author: leeing
  *
  * Created on September 28, 2010, 10:06 AM
@@ -14,11 +13,11 @@
 /*
  * 
  */
-void insertionSort(int arr[]);
-void bubbleSort(int *arr,int size);
-void quickSort(int *arr,int size);
+void insertionSort(int *arr,int length);
+void bubbleSort(int *arr,int length);
+void quickSort(int *arr,int length);
 
-void printArr(int arr[],int length);
+void printArr(int *arr,int length);
 void getSize(int *arr);
 
 int main(int argc, char** argv) {
@@ -53,7 +52,16 @@ void bubbleSort(int *arr,int length) {
     }
 }
 
-
+void insertionSort(int *array,int length){
+    int key,j;
+    for(int i = 1;i<length-1;i++){
+        key = array[i];
+        for(j = i-1;j>=0 && array[j]>key;j--){
+            array[j+1] = array[j];
+        }
+        array[j+1] = key;
+    }
+}
 
 void printArr(int arr[],int length) {
     for(int i = 0;i< length;i++){
@@ -66,6 +74,7 @@ void printArr(int arr[],int length) {
  *
  * @param arr
  * 注意如果直接传入数组的首地址，其计算結果只是其一个数据类型的长度
+ * 在这里，等于 sizeof(int)
  */
 void getSize(int *arr){
     int size = sizeof(arr)/sizeof(int);
