@@ -1,0 +1,24 @@
+# PEERSIM EXAMPLE 1
+
+random.seed 1234567890
+simulation.cycles 5
+
+#control.shf Shuffle
+
+
+network.size 10
+network.node PeerNode
+ 
+protocol.lnk IdleProtocol
+
+protocol.second FindFunction
+
+protocol.say SearchFunction
+protocol.say.linkable lnk
+ 
+include.protocol second say
+
+init.file InitFiles
+include.init file
+
+
