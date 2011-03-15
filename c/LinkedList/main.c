@@ -13,10 +13,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct node{
+typedef struct node {
     int data;
     struct node* next;
-}Node;
+} Node;
 
 void head_insert();
 void tail_insert();
@@ -26,9 +26,9 @@ int getLength(Node*);
 int main(int argc, char** argv) {
     int choice;
     printf("input your choice:\n1.head insert.\n2.tail insert.\n");
-    scanf("%d",&choice);
+    scanf("%d", &choice);
 
-    switch(choice){
+    switch (choice) {
         case 1:
             head_insert();
             break;
@@ -60,52 +60,52 @@ void tail_insert() {
     }
     printf("the elements are:\n");
     traverse(head);
-    printf("the length of the list is: %d\n",getLength(head));
+    printf("the length of the list is: %d\n", getLength(head));
 
 }
 
-void head_insert(){
-    Node* head = malloc(sizeof(Node));
+void head_insert() {
+    Node* head = malloc(sizeof (Node));
     head->next = NULL;
-    
+
     int num;
     printf("please input a num,ended with 0:\n");
-    scanf("%d",&num);
-    
-    while(num!=0){
-        Node* node = malloc(sizeof(Node));
-        
+    scanf("%d", &num);
+
+    while (num != 0) {
+        Node* node = malloc(sizeof (Node));
+
         node->data = num;
         node->next = NULL;
 
         node->next = head->next;
         head->next = node;
-        scanf("%d",&num);
+        scanf("%d", &num);
     }
     printf("the elements are:\n");
     traverse(head);
-    printf("the length of the list is: %d\n",getLength(head));
-   }
+    printf("the length of the list is: %d\n", getLength(head));
+}
 
-void traverse(Node* list){
-    if(list == NULL){
+void traverse(Node* list) {
+    if (list == NULL) {
         printf("empty list");
         exit(0);
     }
     Node* head = list->next;
-    while(head!=NULL){
-        printf("%d\n",head->data);
-        head=head->next;
+    while (head != NULL) {
+        printf("%d\n", head->data);
+        head = head->next;
     }
 }
 
-int getLength(Node* list){
-    if(list->next == NULL)
+int getLength(Node* list) {
+    if (list->next == NULL)
         return 0;
     Node* head = list->next;
-    int length=0;
+    int length = 0;
 
-    while(head!=NULL){
+    while (head != NULL) {
         head = head->next;
         length++;
     }
