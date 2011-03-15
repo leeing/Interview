@@ -1,7 +1,5 @@
 package algorithms.sort;
 
-import algorithms.util.ArrayUtil;
-
 /**
  *
  * @author leeing
