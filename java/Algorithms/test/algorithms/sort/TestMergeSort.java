@@ -13,7 +13,7 @@ import org.junit.Test;
  * @date Mar 15, 2011
  * @author leeing
  */
-public class TestBubbleSort {
+public class TestMergeSort {
 
     Comparable array[] = new Comparable[10];
     Comparable test[] = new Comparable[10];
@@ -29,7 +29,7 @@ public class TestBubbleSort {
     }
     @Test
     public void TestSort(){
-        BubbleSort.bubbleSort(array);
+        MergeSort.mergeSort(array);
         Arrays.sort(test);
         for(int i = 0;i<array.length;i++){
            Assert.assertEquals(array[i], test[i]);
