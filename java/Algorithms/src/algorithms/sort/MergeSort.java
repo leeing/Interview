@@ -24,7 +24,8 @@ public class MergeSort {
     private static void merge(Comparable[]a,Comparable[]tmpArray,int leftPos,int rightPos,int rightEnd){
         int leftEnd = rightPos -1;
         int tmpPos = leftPos;
-        int numElements = rightEnd - leftPos +1;
+        int numElements = rightEnd - leftPos +1; // 元素的总数
+        
         while(leftPos <= leftEnd && rightPos <= rightEnd){
             if(a[leftPos].compareTo(a[rightPos])<=0){
                 tmpArray[tmpPos++]= a[leftPos++];
