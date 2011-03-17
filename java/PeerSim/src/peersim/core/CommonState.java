@@ -40,7 +40,7 @@ public class CommonState {
      * Constant that can be used as a value of simulation phase.
      * It means that the simulation phase information has not been set (unknown).
      *
-     * 表示仿真阶段的信息还没有被设置
+     * 表示仿真阶段的信息还没有被设置（unknown )
      *
      * @see #getPhase
      */
@@ -75,10 +75,12 @@ public class CommonState {
     private static int phase = PHASE_UNKNOWN;
     /**
      * The current pid.
+     * 当前的 pid
      */
     private static int pid;
     /**
      * The current node.
+     * 当前节点
      */
     private static Node node;
     /**
@@ -119,7 +121,7 @@ public class CommonState {
      * 根据配置文件初始化域r，假设配置文件已经载入到内存中。
      */
     static {
-
+        // 如果配置文件中没有 random.seed 参数，那么以当前时间作为 seed
         long seed =
                 Configuration.getLong(PAR_SEED, System.currentTimeMillis());
         initializeRandom(seed);
@@ -152,8 +154,9 @@ public class CommonState {
      * based model, time is the same as cycle which can be safely cast into
      * integer, so no precision is lost.
      *
-     * 用整数的形式返回当前的时间。目的是为了提高 protocol 的性能（在绝对精度不需要的情况下）.
+     * 用整数的形式返回当前的时间。目的是为了提高 protocol 的性能（ints更小更快，在绝对精度不需要的情况下）.
      * 它假设endtime已经被仿真引擎的setEndTime方法设置。
+     * 特别地，在cycyle模型中，
      */
     public static int getIntTime() {
         return (int) (time >> toshift);
@@ -218,6 +221,8 @@ public class CommonState {
     /**
      * Returns the current protocol identifier. In other words, control is
      * held by the indicated protocol on node {@link #getNode}.
+     *
+     * 返回当前的协议标识符。
      */
     public static int getPid() {
         return pid;
