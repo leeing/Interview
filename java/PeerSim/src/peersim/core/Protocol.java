@@ -14,6 +14,8 @@ public interface Protocol extends Cloneable {
      * cloning except a prototype node. That is, the constructor of protocols is
      * used only to construct the prototype. Initialization can be done
      * via {@link Control}s.
+     *
+     * 返回协议的一个克隆。
      */
     public Object clone();
 }

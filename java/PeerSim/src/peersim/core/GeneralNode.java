@@ -5,11 +5,11 @@ import peersim.config.*;
 /**
  * This is the default {@link Node} class that is used to compose the
  * {@link Network}.
+ *
+ * 这是默认的节点实现
  */
 public class GeneralNode implements Node {
 
-// ================= fields ========================================
-// =================================================================
     /** used to generate unique IDs */
     private static long counterID = -1;
     /**
@@ -33,8 +33,7 @@ public class GeneralNode implements Node {
      */
     private long ID;
 
-// ================ constructor and initialization =================
-// =================================================================
+    
     /** Used to construct the prototype node. This class currently does not
      * have specific configuration parameters and so the parameter
      * <code>prefix</code> is not used. It reads the protocol components
@@ -47,6 +46,8 @@ public class GeneralNode implements Node {
         CommonState.setNode(this);
         ID = nextID();
         protocol = new Protocol[names.length];
+
+        // 将所有的协议按顺序存入节点中
         for (int i = 0; i < names.length; i++) {
             CommonState.setPid(i);
             Protocol p = (Protocol) Configuration.getInstance(names[i]);
@@ -80,11 +81,14 @@ public class GeneralNode implements Node {
         return counterID++;
     }
 
-// =============== public methods ==================================
-// =================================================================
+    /**
+     * 返回节点的状态
+     * @param failState
+     */
     public void setFailState(int failState) {
 
         // after a node is dead, all operations on it are errors by definition
+        // 在一个节点 dead 之后，在它上面的任何操作都会抛出异常
         if (failstate == DEAD && failState != DEAD) {
             throw new IllegalStateException(
                     "Cannot change fail state: node is already DEAD");

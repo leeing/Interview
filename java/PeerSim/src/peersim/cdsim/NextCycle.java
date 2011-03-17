@@ -44,6 +44,7 @@ public class NextCycle extends FullNextCycle {
      * It works exactly as {@link FullNextCycle#execute}, only just the configured
      * protocols are iterated over.
      */
+    @Override
     public boolean execute() {
 
         final int cycle = CDState.getCycle();

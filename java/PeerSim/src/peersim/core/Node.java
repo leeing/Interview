@@ -22,11 +22,16 @@ public interface Node extends Fallible, Cloneable {
      * is not a valid protocol id
      * (negative or larger than or equal to the number of protocols), then it throws
      * IndexOutOfBoundsException.
+     *
+     * <p>
+     * 返回节点中的第 i 个协议
      */
     public Protocol getProtocol(int i);
 
     /**
      * Returns the number of protocols included in this node.
+     *
+     * 返回节点包含的协议个数
      */
     public int protocolSize();
 
@@ -36,6 +41,8 @@ public interface Node extends Fallible, Cloneable {
      * because it is not possible to define it otherwise.
      * Using this method will result in
      * undefined behavior. It is provided for the core system.
+     *
+     * 系统内部使用的，自己编写仿真时不要使用这个方法
      */
     public void setIndex(int index);
 
@@ -54,6 +61,8 @@ public interface Node extends Fallible, Cloneable {
      * objects with the same ID in the system during one invocation of the JVM.
      * Preferably nodes
      * should implement <code>hashCode()</code> based on this ID.
+     *
+     * 返回节点的唯一 ID 表示
      */
     public long getID();
 
