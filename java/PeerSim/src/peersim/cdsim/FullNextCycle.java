@@ -9,6 +9,7 @@ import peersim.util.RandPermutation;
  * This does not need to be explicitly configured (although you can do it for
  * hacking purposes).
  *
+ * <p>用来运行cycle-driven仿真中的一个cycle的Control
  * <p>这不需要显示地配置。</p>
  */
 public class FullNextCycle implements Control {

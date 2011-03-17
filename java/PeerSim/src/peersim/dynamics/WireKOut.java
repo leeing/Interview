@@ -1,21 +1,3 @@
-/*
- * Copyright (c) 2003-2005 The BISON Project
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License version 2 as
- * published by the Free Software Foundation.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
- *
- */
-
 package peersim.dynamics;
 
 import peersim.graph.*;
@@ -33,57 +15,41 @@ import peersim.config.*;
  */
 public class WireKOut extends WireGraph {
 
-//--------------------------------------------------------------------------
-//Parameters
-//--------------------------------------------------------------------------
+    /**
+     * The number of outgoing edges to generate from each node.
+     * Passed to {@link GraphFactory#wireKOut}.
+     * No loop edges are generated.
+     * In the undirected case, the degree
+     * of nodes will be on average almost twice as much because the incoming links
+     * also become links out of each node.
+     *
+     * 每个节点生成的outgoing edges。
+     * 不会有循环的edges。
+     * 在无向图的情形中，节点的度在平均情况下是原来的两倍
+     * @config
+     */
+    private static final String PAR_DEGREE = "k";
 
-/**
- * The number of outgoing edges to generate from each node.
- * Passed to {@link GraphFactory#wireKOut}.
- * No loop edges are generated.
- * In the undirected case, the degree
- * of nodes will be on average almost twice as much because the incoming links
- * also become links out of each node.
- *
- * 每个节点生成的outgoing edges。
- * 不会有循环的edges。
- * 在无向图的情形中，节点的度在平均情况下是原来的两倍
- * @config
- */
-private static final String PAR_DEGREE = "k";
+    /**
+     * The number of outgoing edges to generate from each node.
+     */
+    private final int k;
 
-//--------------------------------------------------------------------------
-//Fields
-//--------------------------------------------------------------------------
 
-/**
- * The number of outgoing edges to generate from each node.
- */
-private final int k;
+    /**
+     * Standard constructor that reads the configuration parameters.
+     * Invoked by the simulation engine.
+     * @param prefix the configuration prefix for this class
+     */
+    public WireKOut(String prefix) {
+        super(prefix);
+        k = Configuration.getInt(prefix + "." + PAR_DEGREE);
+    }
 
-//--------------------------------------------------------------------------
-//Initialization
-//--------------------------------------------------------------------------
 
-/**
- * Standard constructor that reads the configuration parameters.
- * Invoked by the simulation engine.
- * @param prefix the configuration prefix for this class
- */
-public WireKOut(String prefix)
-{
-	super(prefix);
-	k = Configuration.getInt(prefix + "." + PAR_DEGREE);
-}
+    /** Calls {@link GraphFactory#wireKOut}. */
+    public void wire(Graph g) {
 
-//--------------------------------------------------------------------------
-//Methods
-//--------------------------------------------------------------------------
-
-/** Calls {@link GraphFactory#wireKOut}. */
-public void wire(Graph g) {
-
-	GraphFactory.wireKOut(g,k,CommonState.r);
-}
-
+        GraphFactory.wireKOut(g, k, CommonState.r);
+    }
 }

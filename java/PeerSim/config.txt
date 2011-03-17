@@ -1,11 +1,15 @@
 # PEERSIM EXAMPLE 1
 
 random.seed 1234567890
-simulation.cycles 30
+simulation.cycles 10
 
 control.shf Shuffle
 
-network.size 50000
+control.mycontrol org.leeing.test.MyControl
+control.youcontrol org.leeing.test.YourControl
+control.youcontrol.FINAL
+
+network.size 10 
  
 protocol.lnk IdleProtocol
 
@@ -27,5 +31,8 @@ init.lin.min 1
 
 # you can change this to select the peak initializer instead
 include.init rnd lin
+order.control   mycontrol
+
+#simulation.nodefaultcycle true
 
 

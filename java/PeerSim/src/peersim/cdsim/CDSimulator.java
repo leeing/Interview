@@ -155,9 +155,11 @@ public class CDSimulator {
             ctrlSchedules = new Scheduler[names.length];
         } else {
             // provide for an extra control that handles the main cycle
+            // 提供一个额外的用于处理 main cycle 的 control
             controls = new Control[names.length + 1];
             ctrlSchedules = new Scheduler[names.length + 1];
             // calling with a prefix that cannot exist
+            // 以一个不可能存在的前缀来调用
             controls[names.length] = new FullNextCycle(" ");
             ctrlSchedules[names.length] = new Scheduler(" ");
         }
