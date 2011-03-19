@@ -1,6 +1,7 @@
 package algorithms.sort;
 
 import algorithms.util.ArrayUtil;
+import algorithms.util.StopWatch;
 import java.util.Arrays;
 import java.util.Random;
 import junit.framework.Assert;
@@ -29,10 +30,17 @@ public class TestBubbleSort {
     }
     @Test
     public void TestSort(){
+       
+        StopWatch timmer = new StopWatch();
+        timmer.start();
         BubbleSort.bubbleSort(array);
-        long start = System.nanoTime();
+        timmer.stop();
+        System.out.println("bubble: "+timmer.getNanoTime());
+
+        timmer.start();
         Arrays.sort(test);
-        System.out.println("bubble sort time: "+ (System.nanoTime() - start)+" ns");
+        timmer.stop();
+        System.out.println("Arrays.sort:"+timmer.getNanoTime());
         for(int i = 0;i<array.length;i++){
            Assert.assertEquals(array[i], test[i]);
         }
