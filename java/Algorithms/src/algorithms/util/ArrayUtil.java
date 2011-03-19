@@ -13,4 +13,7 @@ public class ArrayUtil {
         }
         System.out.println("");
     }
+
+    public static final int ARRAY_SIZE = 10000;
+    
 }
