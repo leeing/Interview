@@ -1,27 +1,13 @@
-/*
- * Copyright (c) 2003-2005 The BISON Project
- *
- * This program is free software; you can redistribute it and/or modify
- * it under the terms of the GNU Lesser General Public License version 2 as
- * published by the Free Software Foundation.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
- * GNU Lesser General Public License for more details.
- *
- * You should have received a copy of the GNU Lesser General Public License
- * along with this program; if not, write to the Free Software
- * Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
- *
- */
-
 package example.aggregation;
 
-import peersim.core.*;
-import peersim.config.FastConfig;
-import peersim.vector.SingleValueHolder;
 import peersim.cdsim.CDProtocol;
+import peersim.config.FastConfig;
+import peersim.core.CommonState;
+import peersim.core.Linkable;
+import peersim.core.Node;
+import peersim.vector.SingleValueHolder;
+
+
 
 /**
  * This class provides an implementation for the averaging function in the
@@ -37,6 +23,7 @@ import peersim.cdsim.CDProtocol;
  * @version $Revision: 1.11 $
  */
 public class AverageFunction extends SingleValueHolder implements CDProtocol {
+
     /**
      * Creates a new {@link example.aggregation.AverageFunction} protocol
      * instance.
@@ -61,19 +48,17 @@ public class AverageFunction extends SingleValueHolder implements CDProtocol {
         int linkableID = FastConfig.getLinkable(protocolID);
         Linkable linkable = (Linkable) node.getProtocol(linkableID);
         if (linkable.degree() > 0) {
-            Node peer = linkable.getNeighbor(CommonState.r.nextInt(linkable
-                    .degree()));
+            Node peer = linkable.getNeighbor(CommonState.r.nextInt(linkable.degree()));
 
             // Failure handling
-            if (!peer.isUp())
+            if (!peer.isUp()) {
                 return;
+            }
 
-            AverageFunction neighbor = (AverageFunction) peer
-                    .getProtocol(protocolID);
+            AverageFunction neighbor = (AverageFunction) peer.getProtocol(protocolID);
             double mean = (this.value + neighbor.value) / 2;
             this.value = mean;
             neighbor.value = mean;
         }
     }
-
 }
