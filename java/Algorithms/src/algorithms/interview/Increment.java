@@ -18,3 +18,4 @@ public class Increment {
         i++;
     }
 }
+// 另外从效率来看：　i++　> x+=1 > x=x+1
