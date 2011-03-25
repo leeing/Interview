@@ -14,12 +14,14 @@ public class FinallyException {
         int a = 3;
         try {
             throw new RuntimeException("exception!");
-        } catch (Exception ex) {
+        } catch (RuntimeException ex) {
             System.out.println("catch block!");
             a = 5;
+            System.out.println("return 5 in catch block.");
             return a;
         } finally {
             a = 47;
+            System.out.println("return 47 in finally block.");
             return a;
         }
     }
