@@ -13,7 +13,10 @@ using namespace std;
 
 
 /*
- * 
+ *　 f(n,1) = 1;
+ *   f(n,m) = f(n,n) m>n
+ *   f(n,n) = f(n,n-1) + 1
+ *   f(n,m) = f(n-1,m)+ f(n-m,m)
  */
 int main(int argc, char** argv) {
     int num;
