@@ -109,6 +109,8 @@ public class FastConfig {
 // ---------------------------------------------------------------------
     /**
      * Returns the number of linkable protocols associated with a given protocol.
+     *
+     * 返回与一个给定的 protocol 关联的 linkable protocol 的个数。
      */
     public static int numLinkables(int pid) {
         return links[pid].length;
@@ -121,6 +123,8 @@ public class FastConfig {
      * IllegalParameterException if there is no linkable associated with the given
      * protocol: we assume here that this happens when the configuration is
      * incorrect.
+     *
+     * 返回第 linkIndex 个 protocol id。
      */
     public static int getLinkable(int pid, int linkIndex) {
         if (linkIndex >= numLinkables(pid)) {

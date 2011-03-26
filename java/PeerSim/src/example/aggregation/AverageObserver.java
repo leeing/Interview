@@ -15,9 +15,6 @@ import peersim.vector.SingleValue;
  */
 public class AverageObserver implements Control {
 
-    // /////////////////////////////////////////////////////////////////////
-    // Constants
-    // /////////////////////////////////////////////////////////////////////
     /**
      * Config parameter that determines the accuracy for standard deviation
      * before stopping the simulation. If not defined, a negative value is used
@@ -32,9 +29,7 @@ public class AverageObserver implements Control {
      * @config
      */
     private static final String PAR_PROT = "protocol";
-    // /////////////////////////////////////////////////////////////////////
-    // Fields
-    // /////////////////////////////////////////////////////////////////////
+
     /**
      * The name of this observer in the configuration. Initialized by the
      * constructor parameter.

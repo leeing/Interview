@@ -7,8 +7,6 @@ import peersim.core.Linkable;
 import peersim.core.Node;
 import peersim.vector.SingleValueHolder;
 
-
-
 /**
  * This class provides an implementation for the averaging function in the
  * aggregation framework. When a pair of nodes interact, their values are
@@ -45,6 +43,10 @@ public class AverageFunction extends SingleValueHolder implements CDProtocol {
      *            the id of this protocol in the protocol array.
      */
     public void nextCycle(Node node, int protocolID) {
+
+        // nextCycle 函数中参数 protocolID 表示自身在协议数据中的ID号。
+        // 因此，如果自定义的协议附加了一个 linkable protocol，就可以
+        // 先得到其 linkableID，进而得到对应的 Linkable 对象，取得邻居的信息
         int linkableID = FastConfig.getLinkable(protocolID);
         Linkable linkable = (Linkable) node.getProtocol(linkableID);
         if (linkable.degree() > 0) {
