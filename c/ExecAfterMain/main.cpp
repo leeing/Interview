@@ -23,6 +23,8 @@ int main(int argc, char** argv) {
     printf("::value is %d\n",::value);
     printf("local value is %d\n",value);
     printf("This is executed first.\n");
+
+    printf("this is v~\v");
     return 0;
 }
 
