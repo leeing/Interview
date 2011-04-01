@@ -11,6 +11,7 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+import org.leeing.hadoop.util.DirectoryUtil;
 
 /**
  * @date Apr 1, 2011
@@ -24,13 +25,8 @@ public class MyTemp {
         String from = "hdfs://localhost:8020/user/leeing/maxtemp/sample.txt";
         String to = "hdfs://localhost:8020/user/leeing/maxtemp/myOutput";
 
-        //delete output directory if exists.
-        Configuration conf = new Configuration();
-        FileSystem fs = FileSystem.get(URI.create(to),conf);
-        if(fs.exists(new Path(to))){
-            fs.delete(new Path(to), true);
-            System.out.println("delete :"+to);
-        }
+        DirectoryUtil.delete(to);
+        
         job.setJobName("Find the max temerature in the data set.");
 
         FileInputFormat.addInputPath(job, new Path(from));
