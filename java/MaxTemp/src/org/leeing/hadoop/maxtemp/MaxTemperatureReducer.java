@@ -11,7 +11,7 @@ import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
 
 /**
- *
+ * 
  * @author leeing
  */
 public class MaxTemperatureReducer extends Reducer<Text, IntWritable, Text, IntWritable> {
