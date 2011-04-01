@@ -1,6 +1,10 @@
 package org.leeing.hadoop.mymax;
 
 import java.io.IOException;
+import java.net.URI;
+import org.apache.hadoop.conf.Configuration;
+import org.apache.hadoop.fs.FileStatus;
+import org.apache.hadoop.fs.FileSystem;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.IntWritable;
 import org.apache.hadoop.io.Text;
@@ -20,6 +24,13 @@ public class MyTemp {
         String from = "hdfs://localhost:8020/user/leeing/maxtemp/sample.txt";
         String to = "hdfs://localhost:8020/user/leeing/maxtemp/myOutput";
 
+        //delete output directory if exists.
+        Configuration conf = new Configuration();
+        FileSystem fs = FileSystem.get(URI.create(to),conf);
+        if(fs.exists(new Path(to))){
+            fs.delete(new Path(to), true);
+            System.out.println("delete :"+to);
+        }
         job.setJobName("Find the max temerature in the data set.");
 
         FileInputFormat.addInputPath(job, new Path(from));
