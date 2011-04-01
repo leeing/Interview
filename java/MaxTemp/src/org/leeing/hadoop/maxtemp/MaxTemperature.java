@@ -14,8 +14,8 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 public class MaxTemperature {
     public static void main(String[] args) throws Exception{
 
-    String from ="hdfs://localhost:54310/user/leeing/input.txt";
-    String to =  "hdfs://localhost:54310/user/leeing/maxtemp_output";
+    String from ="hdfs://localhost:8020/user/leeing/maxtemp/sample.txt";
+    String to =  "hdfs://localhost:8020/user/leeing/maxtemp/output";
 
     Job job = new Job();
     job.setJarByClass(MaxTemperature.class);
