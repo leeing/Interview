@@ -12,25 +12,24 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
  * @author leeing
  */
 public class MaxTemperature {
-    public static void main(String[] args) throws Exception{
 
-    String from ="hdfs://localhost:8020/user/leeing/maxtemp/sample.txt";
-    String to =  "hdfs://localhost:8020/user/leeing/maxtemp/output";
+    public static void main(String[] args) throws Exception {
 
-    Job job = new Job();
-    job.setJarByClass(MaxTemperature.class);
+        String from = "hdfs://localhost:8020/user/leeing/maxtemp/sample.txt";
+        String to = "hdfs://localhost:8020/user/leeing/maxtemp/output";
 
-    FileInputFormat.addInputPath(job, new Path(from));
-    FileOutputFormat.setOutputPath(job, new Path(to));
+        Job job = new Job();
+        job.setJarByClass(MaxTemperature.class);
 
-    job.setMapperClass(MaxTemperatureMapper.class);
-    job.setReducerClass(MaxTemperatureReducer.class);
+        FileInputFormat.addInputPath(job, new Path(from));
+        FileOutputFormat.setOutputPath(job, new Path(to));
 
-    job.setOutputKeyClass(Text.class);
-    job.setOutputValueClass(IntWritable.class);
+        job.setMapperClass(MaxTemperatureMapper.class);
+        job.setReducerClass(MaxTemperatureReducer.class);
 
-    System.exit(job.waitForCompletion(true) ? 0 : 1);
-  }
+        job.setOutputKeyClass(Text.class);
+        job.setOutputValueClass(IntWritable.class);
 
-
+        System.exit(job.waitForCompletion(true) ? 0 : 1);
+    }
 }

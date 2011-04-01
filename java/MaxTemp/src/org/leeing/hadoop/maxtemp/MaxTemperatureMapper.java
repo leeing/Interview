@@ -27,7 +27,7 @@ public class MaxTemperatureMapper extends Mapper<LongWritable, Text, Text, IntWr
         String line = value.toString();
         String year = line.substring(15, 19);
         int airTemperature;
-        if (line.charAt(87) == '+') { 
+        if (line.charAt(87) == '+') {
             airTemperature = Integer.parseInt(line.substring(88, 92));
         } else {
             airTemperature = Integer.parseInt(line.substring(87, 92));
@@ -38,5 +38,3 @@ public class MaxTemperatureMapper extends Mapper<LongWritable, Text, Text, IntWr
         }
     }
 }
-
-
