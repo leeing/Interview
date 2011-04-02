@@ -21,7 +21,9 @@ public class WordCountMapper extends Mapper<LongWritable, Text, Text, IntWritabl
         String[] tokens = line.split(" ");
 
         for(int i = 0;i<tokens.length;i++){
-            context.write(new Text(tokens[i]), ONE);
+            if(!tokens[i].equals("")){
+                context.write(new Text(tokens[i]), ONE);
+            }
         }
         
     }

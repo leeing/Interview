@@ -28,8 +28,8 @@ public class WordCount extends Configured implements Tool{
         Job job = new Job();
         job.setJobName("a word count program.");
 
-        String from = "hdfs://localhost:8020/user/leeing/wordcount";
-        String to = "hdfs://localhost:8020/user/leeing/wordcount/output";
+        String from = "hdfs://localhost:8020/user/leeing/wordcount2";
+        String to = "hdfs://localhost:8020/user/leeing/wordcount2/output";
 
         DirectoryUtil.delete(to);
 
