@@ -1,4 +1,4 @@
-package org.leeing.hadoop.mymax;
+package org.leeing.hadoop.wordcount;
 
 import java.io.IOException;
 import org.apache.hadoop.fs.Path;
@@ -10,31 +10,31 @@ import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.leeing.hadoop.util.DirectoryUtil;
 
 /**
- * @date Apr 1, 2011
+ * @date Apr 2, 2011
  * @author leeing
  */
-public class MyTemp {
+public class WordCount {
 
     public static void main(String[] args) throws IOException, InterruptedException, ClassNotFoundException {
         Job job = new Job();
+        job.setJobName("a word count program.");
 
-        String from = "hdfs://localhost:8020/user/leeing/maxtemp/sample.txt";
-        String to = "hdfs://localhost:8020/user/leeing/maxtemp/myOutput";
+        String from = "hdfs://localhost:8020/user/leeing/wordcount";
+        String to = "hdfs://localhost:8020/user/leeing/wordcount/output";
 
         DirectoryUtil.delete(to);
-        
-        job.setJobName("Find the max temerature in the data set.");
 
         FileInputFormat.addInputPath(job, new Path(from));
         FileOutputFormat.setOutputPath(job, new Path(to));
 
-        job.setMapperClass(MyMaxMapper.class);
-        job.setReducerClass(MyMaxReducer.class);
-
+        job.setMapperClass(WordCountMapper.class);
+        job.setCombinerClass(WordCountReducer.class);
+        job.setReducerClass(WordCountReducer.class);
+        
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(IntWritable.class);
 
-        System.exit(job.waitForCompletion(true) ? 0 : 1);
+        System.exit(job.waitForCompletion(true)?0:1);
 
     }
 }
