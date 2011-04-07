@@ -13,10 +13,29 @@ import org.apache.hadoop.mapreduce.Mapper.Context;
  */
 public class WordCountMapper extends Mapper<LongWritable, Text, Text, IntWritable>{
 
+    @Override
+    protected void cleanup(Context context) throws IOException, InterruptedException {
+        super.cleanup(context);
+        System.out.println("clean up.");
+    }
+
+    @Override
+    public void run(Context context) throws IOException, InterruptedException {
+        super.run(context);
+        System.out.println("run.");
+    }
+
+    @Override
+    protected void setup(Context context) throws IOException, InterruptedException {
+        super.setup(context);
+        System.out.println("setup.");
+    }
+
     private final IntWritable ONE = new IntWritable(1);
     
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
+        System.out.println("map.");
         String line = value.toString();
         String[] tokens = line.split(" ");
 
