@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : config.xml
+    Created on : April 7, 2011, 4:27 PM
+    Author     : leeing
+    Description:
+        Purpose of the document follows.
+-->
+
+<configuration>
+    <property>
+        <name>size</name>
+        <value>12</value>
+    </property>
+    <property>
+        <name>weight</name>
+        <value>light</value>
+    </property>
+</configuration>

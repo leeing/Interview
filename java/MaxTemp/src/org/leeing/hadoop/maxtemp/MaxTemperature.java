@@ -6,6 +6,7 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
+import org.leeing.hadoop.util.DirectoryUtil;
 
 /**
  *
@@ -21,6 +22,8 @@ public class MaxTemperature {
         String from = "hdfs://localhost:8020/user/leeing/maxtemp/sample.txt";
         String to = "hdfs://localhost:8020/user/leeing/maxtemp/output";
 
+        DirectoryUtil.delete(to);
+        
         Job job = new Job();
         job.setJarByClass(MaxTemperature.class);
 
