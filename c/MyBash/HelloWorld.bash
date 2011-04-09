@@ -6,15 +6,21 @@
 # Created on Apr 9, 2011, 6:41:36 PM
 #
 
-echo "Files of the directory is :"
-
-ls ${pwd}
-for file in *
+echo "the files are:"
+for file in `ls ~/source/bash/*.txt`
 do
-    echo $file
-    if grep -l a $file
+    if [ -f $file ]
     then
-        more $file
+         echo $file
     fi
 done
+
+for file in $(ls ~/source/bash/*.txt)
+do
+    if [ -f $file ]
+    then
+         echo $file
+    fi
+done
+
 echo end here

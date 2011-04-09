@@ -15,6 +15,7 @@
                    displayName="Source Files"
                    projectFiles="true"
                    kind="SOURCE_LOGICAL_FOLDER">
+      <itemPath>Counter.bash</itemPath>
       <itemPath>HelloWorld.bash</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
