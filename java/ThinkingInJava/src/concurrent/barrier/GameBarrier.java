@@ -11,21 +11,22 @@ package concurrent.barrier;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
-
 //GameBarrier类（关卡类，这里控制玩家必须全部到达第一关结束的关口才能进入第二关）
 public class GameBarrier {
 
     public static void main(String[] args) {
         CyclicBarrier cyclicBarrier = new CyclicBarrier(4, new Runnable() {
 
+            private  int grade = 0;
+
             @Override
             public void run() {
-                System.out.println("所有玩家进入第二关！");
+                System.out.println("\n所有玩家进入下一关！");
             }
         });
 
         for (int i = 0; i < 4; i++) {
-            new Thread(new Player(i, cyclicBarrier)).start();
+            new Thread(new Player(i, cyclicBarrier, 5)).start();
         }
     }
 }
@@ -34,18 +35,23 @@ class Player implements Runnable {
 
     private CyclicBarrier cyclicBarrier;
     private int id;
+    private int grade;
 
-    public Player(int id, CyclicBarrier cyclicBarrier) {
+    public Player(int id, CyclicBarrier cyclicBarrier, int grade) {
         this.cyclicBarrier = cyclicBarrier;
         this.id = id;
+        this.grade = grade;
     }
 
     @Override
     public void run() {
         try {
-            System.out.println("玩家" + id + "正在玩第一关...");
-            cyclicBarrier.await();
-            System.out.println("玩家" + id + "进入第二关...");
+
+            for (int i = 0; i < grade; i++) {
+                System.out.println("玩家" + id + "正在玩第 " + (i+1) + " 关...");
+                cyclicBarrier.await();
+            }
+
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (BrokenBarrierException e) {
