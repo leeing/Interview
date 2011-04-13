@@ -3,6 +3,12 @@ package concurrent.latch;
 import java.util.concurrent.CountDownLatch;
 
 /**
+ * CountDownLatch 的一个有用特性是，它不要求调用 countDown 方法的线程等到计数到达零时才继续，
+ * 而在所有线程都能通过之前，它只是阻止任何线程继续通过一个 await。
+ * 示例用法： 下面给出了两个类，其中一组 worker 线程使用了两个倒计数锁存器：
+ *   第一个类是一个启动信号，在 driver 为继续执行 worker 做好准备之前，它会阻止所有的 worker 继续执行。
+ *   第二个类是一个完成信号，它允许 driver 在完成所有 worker 之前一直等待。
+
  * @date Apr 13, 2011
  * @author leeing
  */
