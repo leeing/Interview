@@ -20,11 +20,15 @@ public class SubVal extends B {
     }
 }
 
-class B {
+class B implements I{
 
-    private int a = 4;
+    private int a = 4; // 接口中的变量被屏蔽
 
     public void print() {
         System.out.println("a is:" + a);
     }
+}
+
+interface I{
+    String a = "hello world!";
 }
