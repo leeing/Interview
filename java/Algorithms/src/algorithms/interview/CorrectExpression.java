@@ -1,5 +1,7 @@
 package algorithms.interview;
 
+import java.util.LinkedList;
+
 /**
  *
  * @author leeing
@@ -13,6 +15,11 @@ public class CorrectExpression {
         int i=3; s=i+s;
         System.out.println("d is:"+d);
         System.out.println("s:"+s);
+
+        OK ok = new OK();
+        ok.say();
+
+
     }
 
     public void add(int a){}
@@ -33,9 +40,26 @@ public class CorrectExpression {
 
 class MyThread implements Runnable{
 
+
     public void run() {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
+}
+
+class ConcreteClass {
+}
+
+abstract class AThread extends ConcreteClass {
+
+    public abstract void say();
+}
+
+class OK extends AThread {
+
+    @Override
+    public void say() {
+        System.out.println("OK!");
+    }
 }
 
