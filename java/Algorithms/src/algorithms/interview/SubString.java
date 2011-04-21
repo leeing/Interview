@@ -13,8 +13,18 @@ public class SubString {
     public static void main(String[] args) {
         System.out.println(subString("我ABC",2));
         System.out.println(subString("我ABC汉DEF",6));
+        System.out.println("我".getBytes().length); // 中文字符是3个字节
+        System.out.println("a".getBytes().length);// 字母占用 1 个字节
     }
 
+    /**
+     * 感觉这道题出得是有错误的，（“我ABC”，4）应该返回 "我A"，但题意大概是把中文字符都认
+     * 为占用两个字节了。
+     * 
+     * @param str 输入的字符串
+     * @param size 字节数目
+     * @return 截取的字符串
+     */
     public static String subString(String str, int size) {
         int bytes = 0; // 用来存储字符串的总字节数
         for (int i = 0; i < str.length(); i++) {
