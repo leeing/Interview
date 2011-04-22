@@ -33,7 +33,8 @@ OBJECTDIR=build/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/sizeof.o
+	${OBJECTDIR}/array.o \
+	${OBJECTDIR}/byteAnd.o
 
 
 # C Compiler Flags
@@ -60,10 +61,15 @@ dist/Release/MinGW_TDM-Windows/interview.exe: ${OBJECTFILES}
 	${MKDIR} -p dist/Release/MinGW_TDM-Windows
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/interview ${OBJECTFILES} ${LDLIBSOPTIONS} 
 
-${OBJECTDIR}/sizeof.o: sizeof.cpp 
+${OBJECTDIR}/array.o: array.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
-	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/sizeof.o sizeof.cpp
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/array.o array.cpp
+
+${OBJECTDIR}/byteAnd.o: byteAnd.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -O2 -MMD -MP -MF $@.d -o ${OBJECTDIR}/byteAnd.o byteAnd.cpp
 
 # Subprojects
 .build-subprojects:
