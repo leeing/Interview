@@ -33,6 +33,7 @@ OBJECTDIR=build/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/compareMacro.o \
 	${OBJECTDIR}/array.o \
 	${OBJECTDIR}/byteAnd.o
 
@@ -60,6 +61,11 @@ LDLIBSOPTIONS=
 dist/Debug/MinGW_TDM-Windows/interview.exe: ${OBJECTFILES}
 	${MKDIR} -p dist/Debug/MinGW_TDM-Windows
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/interview ${OBJECTFILES} ${LDLIBSOPTIONS} 
+
+${OBJECTDIR}/compareMacro.o: compareMacro.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/compareMacro.o compareMacro.cpp
 
 ${OBJECTDIR}/array.o: array.cpp 
 	${MKDIR} -p ${OBJECTDIR}

@@ -17,6 +17,7 @@
                    kind="SOURCE_LOGICAL_FOLDER">
       <itemPath>array.cpp</itemPath>
       <itemPath>byteAnd.cpp</itemPath>
+      <itemPath>compareMacro.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"
