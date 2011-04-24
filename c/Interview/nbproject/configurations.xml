@@ -15,9 +15,11 @@
                    displayName="Source Files"
                    projectFiles="true"
                    kind="SOURCE_LOGICAL_FOLDER">
+      <itemPath>Interset.cpp</itemPath>
       <itemPath>array.cpp</itemPath>
       <itemPath>byteAnd.cpp</itemPath>
       <itemPath>compareMacro.cpp</itemPath>
+      <itemPath>moreThanHalfNum.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Test Files"

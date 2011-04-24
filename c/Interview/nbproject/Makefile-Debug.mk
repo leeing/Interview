@@ -35,6 +35,8 @@ OBJECTDIR=build/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/compareMacro.o \
 	${OBJECTDIR}/array.o \
+	${OBJECTDIR}/moreThanHalfNum.o \
+	${OBJECTDIR}/Interset.o \
 	${OBJECTDIR}/byteAnd.o
 
 
@@ -71,6 +73,16 @@ ${OBJECTDIR}/array.o: array.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/array.o array.cpp
+
+${OBJECTDIR}/moreThanHalfNum.o: moreThanHalfNum.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/moreThanHalfNum.o moreThanHalfNum.cpp
+
+${OBJECTDIR}/Interset.o: Interset.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/Interset.o Interset.cpp
 
 ${OBJECTDIR}/byteAnd.o: byteAnd.cpp 
 	${MKDIR} -p ${OBJECTDIR}

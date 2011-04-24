@@ -14,7 +14,7 @@ using namespace std;
 /*
  * 
  */
-int main(int argc, char** argv) {
+int main3(int argc, char** argv) {
 //    cout<<"max is :"<<MAX(3+2,6*3)<<endl;
     cout<<__FILE__<<endl;
     cout<<__LINE__<<endl;
