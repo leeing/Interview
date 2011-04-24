@@ -6,7 +6,9 @@
  */
 
 #include <cstdlib>
+#include <cstdio>
 
+int findMaxx(int* ID, int size);
 using namespace std;
 
 /*
@@ -14,6 +16,8 @@ using namespace std;
  */
 int main(int argc, char** argv) {
 
+    int id[] = {1,3,5,7,9,9,9,9,9,100,9};
+    printf("The result is: %d\n",findMaxx(id,11));
     return 0;
 }
 
@@ -61,3 +65,22 @@ int MoreThanHalfNum(int* numbers, unsigned int length) {
     return result;
 }
 
+// 一个更好的算法：每次删除两个不同ID之后，水王的ID依然超过总数的一半，O(N)
+
+int findMaxx(int *ID,int size){
+    int cadidate;
+    int nTimes;
+    for(int i = nTimes = 0;i<size;i++){
+        if(nTimes == 0){
+            cadidate = ID[i];
+            nTimes = 1;
+        }else{
+            if(cadidate == ID[i]){
+                nTimes ++;
+            }else{
+                nTimes --;
+            }
+        }
+    }
+    return cadidate;
+}
