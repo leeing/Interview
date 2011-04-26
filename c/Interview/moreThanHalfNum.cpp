@@ -14,7 +14,7 @@ using namespace std;
 /*
  * 找出数组中出现次数超过一半的元素
  */
-int main(int argc, char** argv) {
+int main5(int argc, char** argv) {
 
     int id[] = {1,3,5,7,9,9,9,9,9,100,9};
     printf("The result is: %d\n",findMaxx(id,11));
@@ -69,8 +69,8 @@ int MoreThanHalfNum(int* numbers, unsigned int length) {
 
 int findMaxx(int *ID,int size){
     int cadidate;
-    int nTimes;
-    for(int i = nTimes = 0;i<size;i++){
+    int nTimes = 0;
+    for(int i = 0;i<size;i++){
         if(nTimes == 0){
             cadidate = ID[i];
             nTimes = 1;

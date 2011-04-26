@@ -20,7 +20,7 @@ int func(int x){
     return counterx;
 }
 /*
- * 腾讯笔试题，实际答案是 x 转换成二进制数后的位数。
+ * 腾讯笔试题，实际答案是 x 转换成二进制数后 1 的个数。
  */
 int main1(int argc, char** argv) {
 

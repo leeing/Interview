@@ -34,8 +34,10 @@ OBJECTDIR=build/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/compareMacro.o \
+	${OBJECTDIR}/LCS.o \
 	${OBJECTDIR}/array.o \
 	${OBJECTDIR}/moreThanHalfNum.o \
+	${OBJECTDIR}/sizeOfChar.o \
 	${OBJECTDIR}/Interset.o \
 	${OBJECTDIR}/byteAnd.o
 
@@ -69,6 +71,11 @@ ${OBJECTDIR}/compareMacro.o: compareMacro.cpp
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/compareMacro.o compareMacro.cpp
 
+${OBJECTDIR}/LCS.o: LCS.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/LCS.o LCS.cpp
+
 ${OBJECTDIR}/array.o: array.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
@@ -78,6 +85,11 @@ ${OBJECTDIR}/moreThanHalfNum.o: moreThanHalfNum.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} $@.d
 	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/moreThanHalfNum.o moreThanHalfNum.cpp
+
+${OBJECTDIR}/sizeOfChar.o: sizeOfChar.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} $@.d
+	$(COMPILE.cc) -g -MMD -MP -MF $@.d -o ${OBJECTDIR}/sizeOfChar.o sizeOfChar.cpp
 
 ${OBJECTDIR}/Interset.o: Interset.cpp 
 	${MKDIR} -p ${OBJECTDIR}
