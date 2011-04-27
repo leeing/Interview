@@ -34,6 +34,16 @@ int main(int argc, char** argv) {
     }else{
         printf("0 is not equal '\\0'\n");
     }
+
+    int j = 0;
+    int A[9];
+    for(;j<10;j++){
+        A[j] = 0;
+    }
+
+    for(int j = 0;j<10;j++){
+        printf("%d\t",A[j]);
+    }
     return 0;
 }
 

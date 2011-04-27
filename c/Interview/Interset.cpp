@@ -14,7 +14,7 @@
 using namespace std;
 
 /*
- * 
+ * 求两个数组的交集
  */
 int main4(int argc, char** argv) {
 
@@ -32,11 +32,11 @@ int main4(int argc, char** argv) {
         }
     }
 
-    set<int>::const_iterator it;
-
-    for(it = set.begin();it!=set.end();it++){
-        cout<<*it<<endl;
-    }
+//    set<int>::const_iterator it;
+//
+//    for(it = set.begin();it!=set.end();it++){
+//        cout<<*it<<endl;
+//    }
     return 0;
 }
 
