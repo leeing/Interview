@@ -33,7 +33,7 @@ public class TestBubbleSort {
        
         StopWatch timmer = new StopWatch();
         timmer.start();
-        BubbleSort.bubbleSort(array);
+        BubbleSort.bubbleSort2(array);
         timmer.stop();
         System.out.println("bubble: "+timmer.getNanoTime());
 

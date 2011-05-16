@@ -9,7 +9,7 @@ public class QuickSort {
 
     private static void quickSort(Comparable a[], int low, int high) {
         if (low < high) {
-            int pivotloc = partition2(a, low, high);
+            int pivotloc = partition3(a, low, high);
             quickSort(a, low, pivotloc - 1);
             quickSort(a, pivotloc + 1, high);
         }
@@ -65,5 +65,22 @@ public class QuickSort {
         }
         a[low] = temp;
         return low;
+    }
+
+    private static int partition3(Comparable a[], int low, int high) {
+        Comparable key = a[high];
+        int i = low -1;
+        for(int j = low;j<high;j++){
+            if(a[j].compareTo(key) <=0 ){
+                i ++;
+                Comparable temp = a[i];
+                a[i] = a[j];
+                a[j] = temp;
+            }
+        }
+        Comparable temp = a[i+1];
+        a[i+1] = a[high];
+        a[high] = temp;
+        return i+1;
     }
 }
