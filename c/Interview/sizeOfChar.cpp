@@ -51,7 +51,7 @@ bool isSmallEndian();
 /*
  * 2011.04.25 腾讯一面的题。
  */
-int main(int argc, char** argv) {
+int main133(int argc, char** argv) {
 
     //    char ch[10];
     //    printf("Define ch: char ch[10]\n");
