@@ -15,5 +15,11 @@ public class ArrayUtil {
     }
 
     public static final int ARRAY_SIZE = 1000;
+
+    public static void swap(int []a,int i,int j){
+        int temp = a[i];
+        a[i] = a[j];
+        a[j] = temp;
+    }
     
 }

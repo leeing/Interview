@@ -15,7 +15,7 @@ public class TestQuickSort {
 
     Comparable array[] = new Comparable[ArrayUtil.ARRAY_SIZE];
     Comparable test[] = new Comparable[ArrayUtil.ARRAY_SIZE];
-    Random random = new Random(47);
+    Random random = new Random();
 
     @Before
     public void init() {
