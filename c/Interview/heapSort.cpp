@@ -16,7 +16,7 @@ void heapsort(int a[], int heapsize);
 void maxheapify(int a[], int i, int heapsize);
 void swap(int *x, int *y);
 
-int main(int argc, char **argv) {
+int main4456(int argc, char **argv) {
     int a[SIZE + 1] = {0, 16, 4, 10, 14, 7, 9, 3, 2, 8, 1};
     /* note a[0] is not used */
     int i, heapsize;

@@ -51,7 +51,7 @@ bool isSmallEndian();
 /*
  * 2011.04.25 腾讯一面的题。
  */
-int main133(int argc, char** argv) {
+int main (int argc, char** argv) {
 
     //    char ch[10];
     //    printf("Define ch: char ch[10]\n");
@@ -107,14 +107,17 @@ int main133(int argc, char** argv) {
 
 
 
-    printf("small ? %d\n",isSmallEndian());
-    p = &u;
-    p->a[0] = 0x00;
-    p->a[1] = 0x01;
-    printf("p.i is %d\n",p->i);
-
-    printf("size of enum Color is :%d\n",sizeof(Color));
-    return 0;
+//    printf("small ? %d\n",isSmallEndian());
+//    p = &u;
+//    p->a[0] = 0x00;
+//    p->a[1] = 0x01;
+//    printf("p.i is %d\n",p->i);
+//
+//    printf("size of enum Color is :%d\n",sizeof(Color));
+//    return 0;
+    string a[] = {"hello","world"};
+    cout<<"sizeof string is:"<<sizeof(string)<<endl;
+    cout<<"sizeof a is :"<<sizeof(a)<<endl;
 }
 
 bool isSmallEndian(){
