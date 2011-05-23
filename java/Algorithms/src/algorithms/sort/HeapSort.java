@@ -10,7 +10,7 @@ import java.util.Random;
  */
 public class HeapSort {
 
-    public  static void heapSort(int array[]) {
+    public static void heapSort(int array[]) {
         heapSort(array, array.length - 1);
     }
 
@@ -24,13 +24,11 @@ public class HeapSort {
             heapsize--;
             maxheapify(array, 0, heapsize);
         }
-
     }
 
     private static void maxheapify(int a[], int i, int heapsize) {
 
         int largest;
-
         int left = 2 * i;
         int right = 2 * i + 1;
 
@@ -50,21 +48,19 @@ public class HeapSort {
             ArrayUtil.swap(a, i, largest);
             maxheapify(a, largest, heapsize); /* recurrsion */
         }
-
-        return; /* return when largest == i */
     }
 
     public static void main(String[] args) {
-         int a[] = new int[20];
-         for(int i = 0;i<a.length;i++){
-             a[i] = new Random().nextInt(100);
-         }
+        int a[] = new int[20];
+        for (int i = 0; i < a.length; i++) {
+            a[i] = new Random().nextInt(100);
+        }
 
-         heapSort(a);
+        heapSort(a);
 
-         for(int i = 0;i<a.length;i++){
-             System.out.println(a[i]);
-         }
+        for (int i = 0; i < a.length; i++) {
+            System.out.println(a[i]);
+        }
 
     }
 }
