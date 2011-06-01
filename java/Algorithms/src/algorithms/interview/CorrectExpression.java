@@ -1,7 +1,5 @@
 package algorithms.interview;
 
-import java.util.LinkedList;
-
 /**
  *
  * @author leeing
