@@ -7,15 +7,15 @@ package algorithms.dp;
  */
 public class Fibonacii {
 
-    public  static int[] temp = new int[50];
+    public  static int[] result = new int[50];
 
     static {
-        for(int i = 0;i<temp.length;i++){
-            temp[i] = -1;
+        for(int i = 0;i<result.length;i++){
+            result[i] = -1;
         }
 
-        temp[1] = 1;
-        temp[2] = 1;
+        result[1] = 1;
+        result[2] = 1;
     }
 
     /**
@@ -25,15 +25,20 @@ public class Fibonacii {
      */
     public static int fib1(int num){
 
-        if(temp[num]!=-1){
-            return temp[num];
+        if(result[num]!=-1){
+            return result[num];
         }else{
-            temp[num] = fib1(num-1)+fib1(num-2);
+            result[num] = fib1(num-1)+fib1(num-2);
         }
-        return temp[num];
+        return result[num];
     }
 
 
+    /**
+     * 经典递归
+     * @param num
+     * @return
+     */
     public static int fib2(int num){
         if(num==1||num==2){
             return 1;
