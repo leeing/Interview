@@ -36,17 +36,17 @@ public class HeapSort2 {
         }
     }
 
-        public static void main(String[] args) {
-         int a[] = new int[20];
-         for(int i = 0;i<a.length;i++){
-             a[i] = new Random().nextInt(100);
-         }
+    public static void main(String[] args) {
+        int a[] = new int[20];
+        for (int i = 0; i < a.length; i++) {
+            a[i] = new Random().nextInt(100);
+        }
 
-         heapSort(a);
+        heapSort(a);
 
-         for(int i = 0;i<a.length;i++){
-             System.out.println(a[i]);
-         }
+        for (int i = 0; i < a.length; i++) {
+            System.out.println(a[i]);
+        }
 
     }
 }

@@ -1,7 +1,5 @@
 package algorithms.sort;
 
-import java.util.Random;
-
 /**
  * 直接插入排序，O(N^2)
  *
