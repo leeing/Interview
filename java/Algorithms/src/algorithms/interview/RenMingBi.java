@@ -15,8 +15,7 @@ public class RenMingBi {
     };
 
     public static void main(String[] args) {
-        System.out.println(
-                convert(100689003));
+        System.out.println(convert(100689003));
     }
 
     public static String convert(int money) {
